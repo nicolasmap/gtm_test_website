@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-        <!-- Antes do código do GTM -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        
-        // Recuperar o device_id armazenado
-        let mixpanelDeviceId = localStorage.getItem('mixpanel_device_id');
-        
-        // Enviar para o dataLayer antes da inicialização do GTM
-        dataLayer.push({
-            'event': 'Pageview',
-            'mixpanel_device_id': mixpanelDeviceId
-        });
-    </script>
-        <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
