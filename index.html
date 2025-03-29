@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K7X57JVD');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nome do Produto - Landing Page</title>
@@ -100,24 +107,6 @@
             padding: 20px;
         }
     </style>
-    <!-- Antes do código do GTM -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        // Verificar se já existe um device_id armazenado
-        let mixpanelDeviceId = localStorage.getItem('mixpanel_device_id');
-        // Enviar para o dataLayer
-        dataLayer.push({
-            'event': 'Pageview',
-            'mixpanel_device_id': mixpanelDeviceId
-        });
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K7X57JVD');</script>
-    <!-- End Google Tag Manager -->
     </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -174,16 +163,6 @@
     // Adicione aqui seus scripts JavaScript, se necessário
     </script>
         // Adicione aqui seus scripts JavaScript, se necessário
-    </script>
-    <script>
-    // Este código deve ser executado depois que o Mixpanel estiver carregado
-    setTimeout(function() {
-        // Verifica se o Mixpanel está disponível e salva o device_id
-        if (typeof mixpanel !== 'undefined' && mixpanel.get_distinct_id) {
-            let deviceId = mixpanel.get_distinct_id();
-            localStorage.setItem('mixpanel_device_id', deviceId);
-        }
-    }, 2000); // Ajuste o tempo conforme necessário
     </script>
 </body>
 </html>
