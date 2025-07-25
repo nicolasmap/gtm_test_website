@@ -7,28 +7,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K7X57JVD');</script>
-    <!-- Snippet que empurra o evento customizado -->
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    document.addEventListener('DOMContentLoaded', function () {
-      /* Mixpanel já carregou (graças à tag Initialize no GTM) */
-      var did     = mixpanel.get_distinct_id();
-      var country = mixpanel.get_property('$country_code');
-      var device  = mixpanel.get_property('$device');
-      var utmSrc  = mixpanel.get_property('$initial_utm_source');
-      var utmMed  = mixpanel.get_property('$initial_utm_medium');
-      var refDom  = mixpanel.get_property('$initial_referring_domain');
-      window.dataLayer.push({
-        event: 'mixpanelDidReady',   // nome que o GTM ouvirá
-        mp_uid: did,
-        mp_country: country,
-        mp_device: device,
-        mp_utm_src: utmSrc,
-        mp_utm_med: utmMed,
-        mp_ref_dom: refDom
-      });
-    });
-    </script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
